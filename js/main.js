@@ -1,3 +1,5 @@
+console.log('main.js loaded');
+
 // Typing animation - types name once and stops
 function initTypingEffect() {
   const text = "Sangamnath R Ingalalli";
@@ -21,7 +23,9 @@ function initTypingEffect() {
 
 // Parallax effect for project cards
 function initParallaxEffect() {
+  console.log('Initializing parallax effect...');
   const cards = document.querySelectorAll('.project-card');
+  console.log('Found', cards.length, 'project cards');
   
   // Set initial state and add index for staggered animation
   cards.forEach((card, index) => {
@@ -89,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize typing effect
   initTypingEffect();
   
-  // Initialize parallax effect
+  // Initialize parallax effect for project cards
   initParallaxEffect();
   
   // Back to Top Button

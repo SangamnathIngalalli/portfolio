@@ -11,6 +11,36 @@
   <script src="js/main.js" defer></script>
   <script src="js/lazyload.js" defer></script>
   <script>
+    // Debug script
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOM fully loaded - Debug Script');
+      
+      // Check if projects section exists
+      const projectsSection = document.querySelector('.projects');
+      console.log('Projects section element:', projectsSection);
+      
+      if (projectsSection) {
+        console.log('Projects section found');
+        console.log('Projects section innerHTML:', projectsSection.innerHTML);
+        
+        // Check project cards
+        const projectCards = document.querySelectorAll('.project-card');
+        console.log(`Found ${projectCards.length} project cards`);
+        
+        // Make sure cards are visible
+        projectCards.forEach((card, index) => {
+          console.log(`Card ${index + 1}:`, card);
+          card.style.display = 'flex';
+          card.style.opacity = '1';
+          card.style.visibility = 'visible';
+          card.style.transform = 'none';
+        });
+      } else {
+        console.error('Projects section not found in the DOM');
+      }
+    });
+  </script>
+  <script>
     // Register Service Worker
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -593,6 +623,60 @@
   <button id="backToTop" class="back-to-top" aria-label="Back to top">
     <i class="fas fa-arrow-up"></i>
   </button>
+  
+  <!-- Scroll Prevention Script -->
+  <script>
+    // Add loading class to body immediately
+    document.documentElement.classList.add('js-loading');
+    
+    // Function to force scroll to top
+    function forceScrollToTop() {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      return true;
+    }
+    
+    // Disable browser's scroll restoration
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    
+    // Set initial scroll position
+    forceScrollToTop();
+    
+    // Handle page load
+    function handleLoad() {
+      forceScrollToTop();
+      
+      // Remove loading class
+      document.documentElement.classList.remove('js-loading');
+      
+      // One more time after a short delay to catch any late scrolls
+      setTimeout(function() {
+        forceScrollToTop();
+        // Ensure we're at the top after all resources are loaded
+        window.scrollTo(0, 0);
+      }, 150);
+      
+      // Catch any scroll events that might happen during loading
+      window.addEventListener('scroll', function scrollHandler() {
+        forceScrollToTop();
+        window.removeEventListener('scroll', scrollHandler);
+      });
+    }
+    
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+    
+    // One more safety check after everything is done
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(forceScrollToTop, 200);
+    });
+  </script>
 </main>
 
 <footer>
