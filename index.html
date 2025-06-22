@@ -153,6 +153,26 @@
         data-category="tools">
         <i class="fas fa-tools"></i> Tools & More
       </button>
+      <button 
+        class="tab-btn" 
+        role="tab" 
+        aria-selected="false" 
+        aria-controls="databases-tab" 
+        id="databases-tab-btn"
+        tabindex="-1"
+        data-category="databases">
+        <i class="fas fa-database"></i> Databases
+      </button>
+      <button 
+        class="tab-btn" 
+        role="tab" 
+        aria-selected="false" 
+        aria-controls="methodologies-tab" 
+        id="methodologies-tab-btn"
+        tabindex="-1"
+        data-category="methodologies">
+        <i class="fas fa-project-diagram"></i> Methodologies
+      </button>
     </div>
 
     <!-- Tech Stack Content -->
@@ -381,6 +401,81 @@
       </div>
 
       <!-- Tools -->
+      <div class="tech-category" 
+           id="databases-tab" 
+           role="tabpanel" 
+           aria-labelledby="databases-tab-btn"
+           tabindex="0"
+           hidden>
+        <div class="tech-grid">
+          <div class="tech-card" data-skill="MySQL">
+            <div class="tech-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <div class="tech-name">MySQL</div>
+            <div class="tech-level">Advanced</div>
+          </div>
+          <div class="tech-card" data-skill="PostgreSQL">
+            <div class="tech-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <div class="tech-name">PostgreSQL</div>
+            <div class="tech-level">Advanced</div>
+          </div>
+          <div class="tech-card" data-skill="Oracle">
+            <div class="tech-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <div class="tech-name">Oracle</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tech-category" 
+           id="methodologies-tab" 
+           role="tabpanel" 
+           aria-labelledby="methodologies-tab-btn"
+           tabindex="0"
+           hidden>
+        <div class="tech-grid">
+          <div class="tech-card" data-skill="Agile">
+            <div class="tech-icon">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <div class="tech-name">Agile</div>
+            <div class="tech-level">Advanced</div>
+          </div>
+          <div class="tech-card" data-skill="Scrum">
+            <div class="tech-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="tech-name">Scrum</div>
+            <div class="tech-level">Advanced</div>
+          </div>
+          <div class="tech-card" data-skill="DevOps">
+            <div class="tech-icon">
+              <i class="fas fa-code-branch"></i>
+            </div>
+            <div class="tech-name">DevOps</div>
+            <div class="tech-level">Advanced</div>
+          </div>
+          <div class="tech-card" data-skill="TDD">
+            <div class="tech-icon">
+              <i class="fas fa-check-double"></i>
+            </div>
+            <div class="tech-name">TDD</div>
+            <div class="tech-level">Advanced</div>
+          </div>
+          <div class="tech-card" data-skill="BDD">
+            <div class="tech-icon">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <div class="tech-name">BDD</div>
+            <div class="tech-level">Advanced</div>
+          </div>
+        </div>
+      </div>
+
       <div class="tech-category" 
            id="tools-tab" 
            role="tabpanel" 
