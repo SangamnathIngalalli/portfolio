@@ -59,7 +59,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📬 Contact
 
-- Email: sangamnath.ingalalli@gmail.com
+- Email: sangamnath.professional@gmail.com
 - LinkedIn: https://www.linkedin.com/in/sangamnath-ingalalli/
 - GitHub: https://github.com/SangamnathIngalalli
 
