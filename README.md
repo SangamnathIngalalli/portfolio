@@ -53,10 +53,6 @@ Welcome to my professional portfolio website! This is a showcase of my skills, p
 - Modify colors in `tailwind.config.js`
 - Update `public/site.webmanifest` for PWA settings
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 📬 Contact
 
 - Email: sangamnath.professional@gmail.com
