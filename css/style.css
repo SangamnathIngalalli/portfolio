@@ -1675,6 +1675,128 @@ body {
 }
 
 /* Print Styles */
+/* Certifications Section */
+.certification-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  counter-reset: cert-counter;
+}
+
+.certification-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 4px solid var(--primary-color);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animation for each certification item */
+.certification-list li:nth-child(1) { animation-delay: 0.1s; }
+.certification-list li:nth-child(2) { animation-delay: 0.3s; }
+.certification-list li:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add a subtle shine effect on hover */
+.certification-list li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.certification-list li:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: var(--shadow-md);
+  border-left-color: var(--secondary-color);
+  z-index: 1;
+}
+
+.certification-list li:hover::before {
+  left: 100%;
+}
+
+.certification-list span {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--gray-100);
+  color: var(--primary-color);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  margin-left: 1rem;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+.download-btn:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px) scale(1.1);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+  animation: none;
+}
+
+.download-btn:active {
+  transform: translateY(0) scale(0.95);
+}
+
+.download-btn i {
+  font-size: 0.9rem;
+}
+
 @media print {
   body {
     background: white;
