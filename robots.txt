@@ -1,0 +1,12 @@
+# Allow all web crawlers to access all parts of the site
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://sangamnath.github.io/portfolio/sitemap.xml
+
+# Disallow unnecessary crawling of non-essential directories
+Disallow: /css/
+Disallow: /js/
+
+# Crawl-delay: 10  # Uncomment and adjust if needed to limit crawl rate
