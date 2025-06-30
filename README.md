@@ -1,6 +1,12 @@
 # Portfolio
 
+[![Portfolio](https://img.shields.io/badge/View-Live%20Demo-brightgreen?style=for-the-badge)](https://sangamnathingalalli.github.io/portfolio/)
+
 Welcome to my professional portfolio website! This is a showcase of my skills, projects, and experience as a developer.
+
+## 🌐 Live Demo
+
+Check out the live version of my portfolio: [https://sangamnath-ingalalli.vercel.app/](https://sangamnath-ingalalli.vercel.app/)
 
 ## 🚀 Features
 
@@ -16,6 +22,9 @@ Welcome to my professional portfolio website! This is a showcase of my skills, p
   - Tailwind CSS
   - Framer Motion (for animations)
   - React Icons
+  - Vite (for fast development and building)
+  - React Router (for navigation)
+  - React Hook Form (for form handling)
 
 ## 📦 Getting Started
 
@@ -47,6 +56,12 @@ Welcome to my professional portfolio website! This is a showcase of my skills, p
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
+## 🚀 Deployment
+
+This project is automatically deployed using GitHub Pages and Vercel:
+- GitHub Pages: [https://sangamnathingalalli.github.io/portfolio/](https://sangamnathingalalli.github.io/portfolio/)
+- Vercel: [https://sangamnath-ingalalli.vercel.app/](https://sangamnath-ingalalli.vercel.app/)
+
 ## 🎨 Customization
 
 - Update `src/data/projects.js` to add/remove projects
@@ -61,7 +76,10 @@ Welcome to my professional portfolio website! This is a showcase of my skills, p
 
 ## 🙏 Acknowledgments
 
-- [Create React App](https://create-react-app.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [React Icons](https://react-icons.github.io/react-icons/)
+- [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
+- [Framer Motion](https://www.framer.com/motion/) - Production-ready animation library for React
+- [React Icons](https://react-icons.github.io/react-icons/) - Popular icons for React projects
+- [React Router](https://reactrouter.com/) - Declarative routing for React
+- [React Hook Form](https://react-hook-form.com/) - Form validation library
