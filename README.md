@@ -47,14 +47,18 @@ Visvesvaraya Technological University, Karnataka | 2015 - 2018 | 64%
 ## 🚀 Project Highlights
 
 ### Automation Framework Development
-- Designed and implemented a robust test automation framework using Selenium WebDriver, TestNG, and Maven
+- Designed and implemented a robust test automation framework using Selenium WebDriver, TestNG, Maven, Gradle, Cucumber, and Playwright
 - Integrated with CI/CD pipelines for automated testing in DevOps environments
-- Reduced regression testing time by 60% through parallel test execution
+- Reduced regression testing time by 60% through parallel test execution and framework optimizations
+- Implemented BDD approach using Cucumber for better collaboration between teams
+- Enhanced test coverage with Playwright for reliable end-to-end testing
 
 ### API Testing Suite
-- Developed comprehensive API test suites using REST Assured
-- Validated microservices architecture with 500+ test scenarios
-- Implemented automated API performance testing
+- Developed comprehensive API test suites using REST Assured and GraphQL
+- Validated microservices architecture with 500+ test scenarios across REST and GraphQL endpoints
+- Implemented automated API performance testing for both REST and GraphQL services
+- Created efficient test queries and mutations for GraphQL APIs using tools like GraphiQL and Postman
+- Optimized API test coverage by leveraging GraphQL's type system and introspection
 
 ## 🛠️ Technical Documentation
 
@@ -92,7 +96,6 @@ For detailed setup instructions and customization, please refer to the sections 
 
 This portfolio is deployed using:
 - [GitHub Pages](https://sangamnathingalalli.github.io/portfolio/)
-- [Vercel](https://sangamnath-ingalalli.vercel.app/)
 
 ## 📬 Get in Touch
 
