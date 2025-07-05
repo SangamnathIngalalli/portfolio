@@ -1,8 +1,8 @@
 # Sangamnath Ingalalli
 
-[![Portfolio](https://img.shields.io/badge/View-Portfolio-blue)](https://sangamnathingalalli.github.io/portfolio/)
-[![LinkedIn](https://img.shields.io/badge/Connect-LinkedIn-0077B5)](https://linkedin.com/in/sangamnath-ingalalli)
-[![GitHub](https://img.shields.io/badge/View-GitHub-181717)](https://github.com/SangamnathIngalalli)
+[![Portfolio]](https://sangamnathingalalli.github.io/portfolio/)
+[![LinkedIn]](https://linkedin.com/in/sangamnath-ingalalli)
+[![GitHub]](https://github.com/SangamnathIngalalli)
 
 ## 🚀 Professional Summary
 
@@ -44,21 +44,17 @@ QA Automation Engineer with 5+ years of experience in Web, API, Mobile, and Micr
 **Master of Computer Applications (MCA)**  
 Visvesvaraya Technological University, Karnataka | 2015 - 2018 | 64%
 
-## 🚀 Project Highlights
+## 📊 Projects Overview
 
-### Automation Framework Development
-- Designed and implemented a robust test automation framework using Selenium WebDriver, TestNG, Maven, Gradle, Cucumber, and Playwright
-- Integrated with CI/CD pipelines for automated testing in DevOps environments
-- Reduced regression testing time by 60% through parallel test execution and framework optimizations
-- Implemented BDD approach using Cucumber for better collaboration between teams
-- Enhanced test coverage with Playwright for reliable end-to-end testing
+| Framework | Description | Repository |
+|-----------|-------------|------------|
+| **RestAssured with Cucumber** | Robust and scalable API test automation framework built with RestAssured, Cucumber, and JUnit 5 | [RestAssuredCucumber](https://github.com/SangamnathIngalalli/RestAssurredCucmber) |
+| **Personal Portfolio** | My personal portfolio website showcasing my projects and skills | [Portfolio](https://github.com/SangamnathIngalalli/portfolio) |
+| **ToDo TypeScript** | A beginner-friendly To-Do application built with TypeScript, HTML, and CSS that demonstrates fundamental TypeScript concepts | [ToDo-TypeScript](https://github.com/SangamnathIngalalli/ToDo-TypeScript) |
+| **Playwright TypeScript** | Industry-standard end-to-end testing framework for OpenCart using Playwright and TypeScript, following best practices for test automation | [Playwright-TypeScript](https://github.com/SangamnathIngalalli/Playwright-Typescript) |
+| **Selenium TestNG** | Robust test automation framework for OpenCart e-commerce platform using Selenium WebDriver, TestNG, and Allure reporting | [Selenium-TestNG](https://github.com/SangamnathIngalalli/Selenium-TestNg) |
+| **GraphQL Test Suite** | Professional GraphQL automation testing framework built for testing the SpaceX GraphQL API | [GraphQLTestSuite](https://github.com/SangamnathIngalalli/GraphQLTestSuite) |
 
-### API Testing Suite
-- Developed comprehensive API test suites using REST Assured and GraphQL
-- Validated microservices architecture with 500+ test scenarios across REST and GraphQL endpoints
-- Implemented automated API performance testing for both REST and GraphQL services
-- Created efficient test queries and mutations for GraphQL APIs using tools like GraphiQL and Postman
-- Optimized API test coverage by leveraging GraphQL's type system and introspection
 
 ## 🛠️ Technical Documentation
 
