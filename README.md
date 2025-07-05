@@ -74,36 +74,6 @@ QA Automation Engineer with **5+ years** of experience in **Web, API, Mobile, an
 | [GraphQL Test Suite](https://github.com/SangamnathIngalalli/GraphQLTestSuite) | Testing framework for SpaceX API | JavaScript, GraphQL, Mocha, Chai |
 | [ToDo TypeScript](https://github.com/SangamnathIngalalli/ToDo-TypeScript) | Task management application | TypeScript, HTML, CSS |
 
-## 🛠️ Development Setup
-
-### Prerequisites
-- Node.js (v16+ recommended)
-- npm (v8+) or yarn (v1.22+)
-- Git
-
-### Local Development
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/SangamnathIngalalli/portfolio.git
-cd portfolio
-
-# 2. Install dependencies
-npm install
-# or
-yarn install
-
-# 3. Start development server
-npm run dev
-# or
-yarn dev
-
-# 4. Open http://localhost:3000 in your browser
-```
-
-## 🌐 Deployment
-
-This portfolio is deployed using [GitHub Pages](https://sangamnathingalalli.github.io/portfolio/).
 
 ## 📬 Contact Me
 
