@@ -116,6 +116,4 @@ This portfolio is deployed using [GitHub Pages](https://sangamnathingalalli.gith
 
 <div align="center">
   <p>Made with ❤️ by Sangamnath Ingalalli</p>
-  <p>Last updated: July 2024</p>
 </div>
-- 📱 Mobile: +91 8197775778
