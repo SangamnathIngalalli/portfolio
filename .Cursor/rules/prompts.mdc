@@ -1,0 +1,285 @@
+# Cursor AI Prompt Templates
+
+## Overview
+This document contains reusable prompt templates and instruction snippets for Cursor AI to use when working on this portfolio project.
+
+## General Prompt Templates
+
+### Code Review Template
+```
+Please review the following code for:
+1. Consistency with project patterns
+2. Performance optimization opportunities
+3. Accessibility compliance
+4. Security considerations
+5. Documentation completeness
+
+Code to review: [CODE_SNIPPET]
+```
+
+### Feature Implementation Template
+```
+I need to implement [FEATURE_NAME] for the portfolio. Please:
+1. Check existing patterns in the codebase
+2. Follow the guidelines in .Cursor/rules/generate.mdc
+3. Update relevant documentation
+4. Ensure accessibility compliance
+5. Test the implementation
+
+Requirements: [REQUIREMENTS]
+```
+
+### Bug Fix Template
+```
+There's a bug in [FILE_PATH] where [BUG_DESCRIPTION]. Please:
+1. Identify the root cause
+2. Provide a fix that follows project patterns
+3. Test the solution
+4. Update any affected documentation
+
+Error details: [ERROR_DETAILS]
+```
+
+### Documentation Update Template
+```
+Please update the documentation for [FEATURE/COMPONENT]. Include:
+1. Clear explanation of functionality
+2. Usage examples
+3. Any configuration options
+4. Known limitations or considerations
+
+Context: [CONTEXT]
+```
+
+## Portfolio-Specific Prompts
+
+### Content Update Template
+```
+Please update the portfolio content for [SECTION_NAME]. Consider:
+1. Professional tone and presentation
+2. SEO optimization
+3. Accessibility for screen readers
+4. Mobile responsiveness
+5. Performance impact
+
+New content: [CONTENT]
+```
+
+### Skill Addition Template
+```
+I want to add [NEW_SKILL] to my portfolio. Please:
+1. Update the skills section in index.html
+2. Add appropriate icons and styling
+3. Ensure it fits the existing design
+4. Update any related documentation
+
+Skill details: [SKILL_DETAILS]
+```
+
+### Project Addition Template
+```
+I want to add a new project to my portfolio. Please:
+1. Create a new project card following existing patterns
+2. Include appropriate links and descriptions
+3. Update the project grid layout if needed
+4. Ensure responsive design
+
+Project details: [PROJECT_DETAILS]
+```
+
+### Performance Optimization Template
+```
+Please optimize the performance of [COMPONENT/FILE]. Focus on:
+1. Loading speed improvements
+2. Resource optimization
+3. Lazy loading implementation
+4. Caching strategies
+5. Bundle size reduction
+
+Current performance issues: [ISSUES]
+```
+
+## Accessibility Prompts
+
+### Accessibility Audit Template
+```
+Please audit the accessibility of [COMPONENT/PAGE]. Check for:
+1. ARIA labels and roles
+2. Keyboard navigation
+3. Color contrast ratios
+4. Screen reader compatibility
+5. Focus management
+
+Component to audit: [COMPONENT]
+```
+
+### Accessibility Fix Template
+```
+Please fix the accessibility issues in [FILE_PATH]. Issues include:
+1. Missing ARIA labels
+2. Poor color contrast
+3. Keyboard navigation problems
+4. Screen reader incompatibility
+
+Issues to fix: [ISSUES]
+```
+
+## SEO and Meta Tags
+
+### SEO Optimization Template
+```
+Please optimize the SEO for [PAGE/SECTION]. Include:
+1. Meta tags and descriptions
+2. Structured data (JSON-LD)
+3. Semantic HTML elements
+4. Open Graph tags
+5. Twitter Card tags
+
+Content to optimize: [CONTENT]
+```
+
+### Meta Tag Update Template
+```
+Please update the meta tags for [PAGE]. Consider:
+1. Page title optimization
+2. Meta description
+3. Keywords (if applicable)
+4. Open Graph properties
+5. Twitter Card properties
+
+Page context: [CONTEXT]
+```
+
+## Testing Prompts
+
+### Cross-browser Testing Template
+```
+Please ensure [FEATURE] works across browsers. Test:
+1. Chrome, Firefox, Safari, Edge
+2. Mobile browsers
+3. Different screen sizes
+4. Various user interactions
+5. Performance metrics
+
+Feature to test: [FEATURE]
+```
+
+### Responsive Design Template
+```
+Please verify the responsive design for [COMPONENT]. Check:
+1. Mobile layout (320px+)
+2. Tablet layout (768px+)
+3. Desktop layout (1024px+)
+4. Touch interactions
+5. Content readability
+
+Component: [COMPONENT]
+```
+
+## Error Handling Prompts
+
+### Error Handling Template
+```
+Please add proper error handling to [FUNCTION/COMPONENT]. Include:
+1. Try-catch blocks where appropriate
+2. User-friendly error messages
+3. Fallback functionality
+4. Logging for debugging
+5. Graceful degradation
+
+Function/Component: [FUNCTION]
+```
+
+### Validation Template
+```
+Please add input validation to [FORM/FUNCTION]. Validate:
+1. Required fields
+2. Data types and formats
+3. Length restrictions
+4. Security considerations
+5. User feedback
+
+Form/Function: [FORM]
+```
+
+## Documentation Prompts
+
+### Code Documentation Template
+```
+Please add documentation to [CODE_SECTION]. Include:
+1. Function/class descriptions
+2. Parameter explanations
+3. Return value details
+4. Usage examples
+5. Edge case notes
+
+Code section: [CODE]
+```
+
+### README Update Template
+```
+Please update the README to reflect [CHANGES]. Include:
+1. New features or changes
+2. Updated installation instructions
+3. Usage examples
+4. Known issues or limitations
+5. Contributing guidelines
+
+Changes: [CHANGES]
+```
+
+## Performance Prompts
+
+### Image Optimization Template
+```
+Please optimize the images in [DIRECTORY]. Focus on:
+1. File format selection (WebP, AVIF, etc.)
+2. Compression settings
+3. Responsive image sizes
+4. Lazy loading implementation
+5. Alt text for accessibility
+
+Directory: [DIRECTORY]
+```
+
+### CSS Optimization Template
+```
+Please optimize the CSS in [FILE]. Consider:
+1. Removing unused styles
+2. Consolidating selectors
+3. Reducing specificity conflicts
+4. Using CSS custom properties
+5. Minification opportunities
+
+CSS file: [FILE]
+```
+
+## Security Prompts
+
+### Security Review Template
+```
+Please review the security of [COMPONENT]. Check for:
+1. XSS vulnerabilities
+2. Input validation
+3. Secure external links
+4. Content Security Policy
+5. HTTPS requirements
+
+Component: [COMPONENT]
+```
+
+### Data Sanitization Template
+```
+Please add data sanitization to [FUNCTION]. Sanitize:
+1. User inputs
+2. External data
+3. HTML content
+4. URLs and links
+5. Form submissions
+
+Function: [FUNCTION]
+```
+description:
+globs:
+alwaysApply: false
+---
