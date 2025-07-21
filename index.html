@@ -63,6 +63,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="resources/image/profile.jpeg">
+  
+  <!-- Simple scroll to top like test page -->
+  <script>
+    // Force scroll to top on load
+    window.scrollTo(0, 0);
+    window.addEventListener('load', function() {
+      window.scrollTo(0, 0);
+    });
+  </script>
   <script src="js/main.js" defer></script>
   <script src="js/lazyload.js" defer></script>
   <script>
@@ -777,64 +787,8 @@
       <li>Certified Selenium Professional</li>
     </ul>
   </section>
-  <!-- Back to Top Button -->
-  <button id="backToTop" class="back-to-top" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-  
-  <!-- Scroll Prevention Script -->
-  <script>
-    // Add loading class to body immediately
-    document.documentElement.classList.add('js-loading');
-    
-    // Function to force scroll to top
-    function forceScrollToTop() {
-      window.scrollTo(0, 0);
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-      return true;
-    }
-    
-    // Disable browser's scroll restoration
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
-    
-    // Set initial scroll position
-    forceScrollToTop();
-    
-    // Handle page load
-    function handleLoad() {
-      forceScrollToTop();
-      
-      // Remove loading class
-      document.documentElement.classList.remove('js-loading');
-      
-      // One more time after a short delay to catch any late scrolls
-      setTimeout(function() {
-        forceScrollToTop();
-        // Ensure we're at the top after all resources are loaded
-        window.scrollTo(0, 0);
-      }, 150);
-      
-      // Catch any scroll events that might happen during loading
-      window.addEventListener('scroll', function scrollHandler() {
-        forceScrollToTop();
-        window.removeEventListener('scroll', scrollHandler);
-      });
-    }
-    
-    if (document.readyState === 'complete') {
-      handleLoad();
-    } else {
-      window.addEventListener('load', handleLoad);
-    }
-    
-    // One more safety check after everything is done
-    window.addEventListener('DOMContentLoaded', function() {
-      setTimeout(forceScrollToTop, 200);
-    });
-  </script>
+  <!-- Back to Top Button - BULLETPROOF VERSION -->
+  <button id="backToTopBtn" class="back-to-top-button" style="position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; border-radius: 50%; background: #2563eb; color: white; border: none; cursor: pointer; font-size: 20px; display: none; z-index: 9999; transition: all 0.3s ease;">↑</button>
 </main>
 
 <footer>
