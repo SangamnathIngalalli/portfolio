@@ -96,6 +96,70 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize parallax effect for project cards
   initParallaxEffect();
   
+  // Back to Top Button
+  const backToTopButton = document.getElementById('backToTop');
+  let lastScrollTop = 0;
+  let isScrollingDown = false;
+  
+  // Update scroll position attribute
+  function updateScrollPosition() {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    document.documentElement.setAttribute('data-scroll', scrollPosition);
+    return scrollPosition;
+  }
+  
+  // Initial check
+  updateScrollPosition();
+  
+  // Handle scroll events
+  window.addEventListener('scroll', function() {
+    const scrollPosition = updateScrollPosition();
+    
+    // Determine scroll direction
+    isScrollingDown = scrollPosition > lastScrollTop;
+    
+    // Add/remove scrolling-down class for animation
+    if (isScrollingDown && scrollPosition > 100) {
+      backToTopButton.classList.add('scrolling-down');
+    } else {
+      backToTopButton.classList.remove('scrolling-down');
+    }
+    
+    lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition;
+  }, { passive: true });
+  
+  // Show button immediately if not at top on page load
+  if (window.pageYOffset > 0) {
+    backToTopButton.classList.add('visible');
+  }
+
+  // Smooth scroll to top with easing
+  backToTopButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    function easeInOutCubic(t) {
+      return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+    }
+    
+    const duration = 600; // ms
+    const start = window.pageYOffset;
+    const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+    
+    function scroll() {
+      const now = 'now' in window.performance ? performance.now() : new Date().getTime();
+      const time = Math.min(1, ((now - startTime) / duration));
+      const easedTime = easeInOutCubic(time);
+      
+      window.scroll(0, Math.ceil((1 - easedTime) * start));
+      
+      if (time < 1) {
+        requestAnimationFrame(scroll);
+      }
+    }
+    
+    scroll();
+  });
+
   // Smooth scroll for navigation links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -192,107 +256,6 @@ document.addEventListener('DOMContentLoaded', function() {
     bar.style.width = percent;
     bar.setAttribute('aria-valuenow', parseInt(percent));
   });
-
-  // BULLETPROOF Back to Top Button Implementation
-  console.log('=== INITIALIZING BULLETPROOF BACK-TO-TOP BUTTON ===');
-  
-  function initBackToTopButton() {
-    const button = document.getElementById('backToTopBtn');
-    
-    if (!button) {
-      console.error('❌ Back-to-top button not found with ID: backToTopBtn');
-      return;
-    }
-    
-    console.log('✅ Back-to-top button found');
-    
-    // Force initial state
-    button.style.display = 'none';
-    button.style.visibility = 'hidden';
-    button.style.opacity = '0';
-    button.style.pointerEvents = 'none';
-    
-    // Create a robust scroll handler
-    let scrollTimeout;
-    const handleScroll = function() {
-      clearTimeout(scrollTimeout);
-      
-      scrollTimeout = setTimeout(function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        console.log('📊 Current scroll position:', scrollTop);
-        
-        if (scrollTop > 200) {
-          // Show button with multiple style properties
-          button.style.display = 'block';
-          button.style.visibility = 'visible';
-          button.style.opacity = '1';
-          button.style.pointerEvents = 'auto';
-          button.style.transform = 'scale(1)';
-          console.log('✅ Button shown at position:', scrollTop);
-        } else {
-          // Hide button with multiple style properties
-          button.style.display = 'none';
-          button.style.visibility = 'hidden';
-          button.style.opacity = '0';
-          button.style.pointerEvents = 'none';
-          button.style.transform = 'scale(0.8)';
-          console.log('❌ Button hidden at position:', scrollTop);
-        }
-      }, 10); // Small delay to prevent excessive updates
-    };
-    
-    // Add scroll listener with passive option for performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    // Create a robust click handler
-    const handleClick = function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      
-      console.log('🚀 Scrolling to top');
-      
-      // Disable button during scroll
-      button.style.pointerEvents = 'none';
-      button.style.opacity = '0.7';
-      
-      // Smooth scroll to top
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-      
-      // Re-enable button after scroll completes
-      setTimeout(() => {
-        button.style.pointerEvents = 'auto';
-        button.style.opacity = '1';
-      }, 1000);
-    };
-    
-    // Add click listener
-    button.addEventListener('click', handleClick);
-    
-    // Test functionality after 2 seconds
-    setTimeout(() => {
-      console.log('🧪 TESTING: Forcing button to show');
-      button.style.display = 'block';
-      button.style.visibility = 'visible';
-      button.style.opacity = '1';
-      button.style.pointerEvents = 'auto';
-      
-      setTimeout(() => {
-        console.log('🧪 TESTING: Forcing button to hide');
-        button.style.display = 'none';
-        button.style.visibility = 'hidden';
-        button.style.opacity = '0';
-        button.style.pointerEvents = 'none';
-      }, 2000);
-    }, 2000);
-    
-    console.log('✅ Back-to-top button initialization complete');
-  }
-  
-  // Initialize back-to-top button
-  initBackToTopButton();
 
   // Tech Stack Tabs Functionality
   const initTechTabs = () => {
