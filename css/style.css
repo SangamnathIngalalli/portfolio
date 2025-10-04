@@ -2084,3 +2084,133 @@ body {
     margin: 0.2rem;
   }
 }
+
+/* Project Tech Badges */
+.project-tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.2);
+}
+
+.tech-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.tech-badge i {
+  font-size: 0.9rem;
+}
+
+/* Project Metrics */
+.project-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 16px 0;
+  padding: 12px 0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.metric i {
+  color: #667eea;
+  font-size: 1.1rem;
+}
+
+.metric strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Enhanced Project Card */
+.project-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  color: #333;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.project-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.project-link:hover {
+  color: #764ba2;
+  gap: 12px;
+}
+
+.project-link i {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover i {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tech-badge {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+  
+  .project-metrics {
+    gap: 12px;
+  }
+  
+  .metric {
+    font-size: 0.85rem;
+  }
+}
